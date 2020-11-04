@@ -1,0 +1,60 @@
+---
+title: "Tugas_Modul3"
+author: "Torangto Situngkir"
+date: "10/4/2020"
+output:
+  word_document: default
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+
+## R Markdown
+
+1
+```{r}
+library(dslabs)
+data(murders)
+str(murders)
+```
+
+   -> Jawabannya adalah C karna hasil dari str(murders) menampilkan Data berisi nama negara bagian,singkatan dari nama negara bagian,wilayah negara bagian,dan populasi negara bagian serta jumlah total pembunuhan pada tahun 2010.
+
+2  Nama - nama kolom pada data frames murders adalah : 
+```{r murders}
+  names(murders)
+```
+
+3
+```{r}
+  a = murders$abb
+  print(a)
+  
+  class(a)
+```
+4
+```{r}
+  b= murders[[2]]
+  print(b)
+  
+  c = a == b 
+  print(c)
+```
+  
+  -> Ya, A dan B nilainya sama
+  
+5
+```{r}
+  
+  length(levels(murders$region))
+```
+  
+  -> Jumlah regionnya 4
+  
+6
+```{r}
+  
+  table(matrix(murders$region))
+```
+  
+
