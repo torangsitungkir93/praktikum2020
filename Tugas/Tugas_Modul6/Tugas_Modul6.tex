@@ -1,0 +1,209 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Tugas\_Modul6},
+  pdfauthor={Torangto Situngkir},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\title{Tugas\_Modul6}
+\author{Torangto Situngkir}
+\date{12/7/2020}
+
+\begin{document}
+\maketitle
+
+1
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(dplyr)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'dplyr'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(dslabs)}
+\KeywordTok{data}\NormalTok{(}\StringTok{"murders"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{murders <-}\StringTok{ }\KeywordTok{mutate}\NormalTok{(murders, }\DataTypeTok{rate =}\NormalTok{ total}\OperatorTok{/}\NormalTok{population }\OperatorTok{*}\StringTok{ }\DecValTok{10}\OperatorTok{^}\DecValTok{6}\NormalTok{ )}
+\NormalTok{murders}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                   state abb        region population total       rate
+## 1               Alabama  AL         South    4779736   135  28.244238
+## 2                Alaska  AK          West     710231    19  26.751860
+## 3               Arizona  AZ          West    6392017   232  36.295273
+## 4              Arkansas  AR         South    2915918    93  31.893901
+## 5            California  CA          West   37253956  1257  33.741383
+## 6              Colorado  CO          West    5029196    65  12.924531
+## 7           Connecticut  CT     Northeast    3574097    97  27.139722
+## 8              Delaware  DE         South     897934    38  42.319369
+## 9  District of Columbia  DC         South     601723    99 164.527532
+## 10              Florida  FL         South   19687653   669  33.980688
+## 11              Georgia  GA         South    9920000   376  37.903226
+## 12               Hawaii  HI          West    1360301     7   5.145920
+## 13                Idaho  ID          West    1567582    12   7.655102
+## 14             Illinois  IL North Central   12830632   364  28.369608
+## 15              Indiana  IN North Central    6483802   142  21.900730
+## 16                 Iowa  IA North Central    3046355    21   6.893484
+## 17               Kansas  KS North Central    2853118    63  22.081106
+## 18             Kentucky  KY         South    4339367   116  26.732010
+## 19            Louisiana  LA         South    4533372   351  77.425810
+## 20                Maine  ME     Northeast    1328361    11   8.280881
+## 21             Maryland  MD         South    5773552   293  50.748655
+## 22        Massachusetts  MA     Northeast    6547629   118  18.021791
+## 23             Michigan  MI North Central    9883640   413  41.786225
+## 24            Minnesota  MN North Central    5303925    53   9.992600
+## 25          Mississippi  MS         South    2967297   120  40.440846
+## 26             Missouri  MO North Central    5988927   321  53.598917
+## 27              Montana  MT          West     989415    12  12.128379
+## 28             Nebraska  NE North Central    1826341    32  17.521372
+## 29               Nevada  NV          West    2700551    84  31.104763
+## 30        New Hampshire  NH     Northeast    1316470     5   3.798036
+## 31           New Jersey  NJ     Northeast    8791894   246  27.980319
+## 32           New Mexico  NM          West    2059179    67  32.537239
+## 33             New York  NY     Northeast   19378102   517  26.679599
+## 34       North Carolina  NC         South    9535483   286  29.993237
+## 35         North Dakota  ND North Central     672591     4   5.947151
+## 36                 Ohio  OH North Central   11536504   310  26.871225
+## 37             Oklahoma  OK         South    3751351   111  29.589340
+## 38               Oregon  OR          West    3831074    36   9.396843
+## 39         Pennsylvania  PA     Northeast   12702379   457  35.977513
+## 40         Rhode Island  RI     Northeast    1052567    16  15.200933
+## 41       South Carolina  SC         South    4625364   207  44.753235
+## 42         South Dakota  SD North Central     814180     8   9.825837
+## 43            Tennessee  TN         South    6346105   219  34.509357
+## 44                Texas  TX         South   25145561   805  32.013603
+## 45                 Utah  UT          West    2763885    22   7.959810
+## 46              Vermont  VT     Northeast     625741     2   3.196211
+## 47             Virginia  VA         South    8001024   250  31.246001
+## 48           Washington  WA          West    6724540    93  13.829942
+## 49        West Virginia  WV         South    1852994    27  14.571013
+## 50            Wisconsin  WI North Central    5686986    97  17.056487
+## 51              Wyoming  WY          West     563626     5   8.871131
+\end{verbatim}
+
+\end{document}

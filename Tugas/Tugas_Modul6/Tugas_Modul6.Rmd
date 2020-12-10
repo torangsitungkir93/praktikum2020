@@ -1,0 +1,61 @@
+---
+title: "Tugas_Modul6"
+author: "Torangto Situngkir"
+date: "12/7/2020"
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1
+```{r}
+library(dplyr)
+library(dslabs)
+data("murders")
+```
+
+
+1.
+```{r}
+murders <- mutate(murders, rate = total/population * 10^6 )
+murders
+```
+
+2.
+```{r}
+x <-murders$rate
+murders <- mutate(murders,ranking = rank(x))
+murders
+```
+
+3.
+```{r}
+select(murders,state,abb)
+```
+
+4.
+```{r}
+murders %>% filter( ranking > 46 & ranking <=51) %>% select(state)
+```
+
+5.
+```{r}
+murders %>% filter(region == "Northeast" | region == "West",rate < 1) %>% select(state,rate,ranking)
+
+```
+
+6.
+```{r}
+ data("murders")
+ my_states <- murders %>%
+ mutate(rate = total/population * 10^5, ranking = rank(rate)) %>%
+ filter(region == "Northeast" | region == "West", rate < 1) %>%
+ select(state,rate,ranking)
+ my_states
+```
+

@@ -1,0 +1,345 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Tugas\_Modul4},
+  pdfauthor={Torangto Situngkir},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\title{Tugas\_Modul4}
+\author{Torangto Situngkir}
+\date{10/10/2020}
+
+\begin{document}
+\maketitle
+
+1
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(dslabs)}
+\KeywordTok{data}\NormalTok{(murders)}
+\KeywordTok{str}\NormalTok{(murders)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    51 obs. of  5 variables:
+##  $ state     : chr  "Alabama" "Alaska" "Arizona" "Arkansas" ...
+##  $ abb       : chr  "AL" "AK" "AZ" "AR" ...
+##  $ region    : Factor w/ 4 levels "Northeast","South",..: 2 4 4 2 4 4 1 2 2 2 ...
+##  $ population: num  4779736 710231 6392017 2915918 37253956 ...
+##  $ total     : num  135 19 232 93 1257 ...
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  pop <-}\StringTok{ }\NormalTok{murders}\OperatorTok{$}\NormalTok{population}
+  \KeywordTok{sort}\NormalTok{(pop)[[}\DecValTok{1}\NormalTok{]]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 563626
+\end{verbatim}
+
+2
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \KeywordTok{order}\NormalTok{(pop)[[}\DecValTok{1}\NormalTok{]]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 51
+\end{verbatim}
+
+3
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \KeywordTok{which.min}\NormalTok{(pop) }\OperatorTok{==}\StringTok{ }\KeywordTok{order}\NormalTok{(pop)[[}\DecValTok{1}\NormalTok{]]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+
+4
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  murders}\OperatorTok{$}\NormalTok{state[[}\KeywordTok{order}\NormalTok{(pop)[[}\DecValTok{1}\NormalTok{]]]]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Wyoming"
+\end{verbatim}
+
+5
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  ranks <-}\StringTok{ }\KeywordTok{rank}\NormalTok{(murders}\OperatorTok{$}\NormalTok{population)}
+\NormalTok{  my_df <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{name=}\NormalTok{murders}\OperatorTok{$}\NormalTok{state,}\DataTypeTok{peringkat=}\NormalTok{ranks)}
+\NormalTok{  my_df}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                    name peringkat
+## 1               Alabama        29
+## 2                Alaska         5
+## 3               Arizona        36
+## 4              Arkansas        20
+## 5            California        51
+## 6              Colorado        30
+## 7           Connecticut        23
+## 8              Delaware         7
+## 9  District of Columbia         2
+## 10              Florida        49
+## 11              Georgia        44
+## 12               Hawaii        12
+## 13                Idaho        13
+## 14             Illinois        47
+## 15              Indiana        37
+## 16                 Iowa        22
+## 17               Kansas        19
+## 18             Kentucky        26
+## 19            Louisiana        27
+## 20                Maine        11
+## 21             Maryland        33
+## 22        Massachusetts        38
+## 23             Michigan        43
+## 24            Minnesota        31
+## 25          Mississippi        21
+## 26             Missouri        34
+## 27              Montana         8
+## 28             Nebraska        14
+## 29               Nevada        17
+## 30        New Hampshire        10
+## 31           New Jersey        41
+## 32           New Mexico        16
+## 33             New York        48
+## 34       North Carolina        42
+## 35         North Dakota         4
+## 36                 Ohio        45
+## 37             Oklahoma        24
+## 38               Oregon        25
+## 39         Pennsylvania        46
+## 40         Rhode Island         9
+## 41       South Carolina        28
+## 42         South Dakota         6
+## 43            Tennessee        35
+## 44                Texas        50
+## 45                 Utah        18
+## 46              Vermont         3
+## 47             Virginia        40
+## 48           Washington        39
+## 49        West Virginia        15
+## 50            Wisconsin        32
+## 51              Wyoming         1
+\end{verbatim}
+
+6
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  ind =}\StringTok{ }\KeywordTok{order}\NormalTok{(my_df}\OperatorTok{$}\NormalTok{peringkat)}
+\NormalTok{  my_dff =}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{name=}\NormalTok{(}\KeywordTok{sort}\NormalTok{(murders}\OperatorTok{$}\NormalTok{state))[ind],}\DataTypeTok{Populasi =} \KeywordTok{sort}\NormalTok{(murders}\OperatorTok{$}\NormalTok{population),}\DataTypeTok{Peringkat =} \KeywordTok{sort}\NormalTok{(ranks))}
+\NormalTok{  my_dff}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                    name Populasi Peringkat
+## 1               Wyoming   563626         1
+## 2  District of Columbia   601723         2
+## 3               Vermont   625741         3
+## 4          North Dakota   672591         4
+## 5                Alaska   710231         5
+## 6          South Dakota   814180         6
+## 7              Delaware   897934         7
+## 8               Montana   989415         8
+## 9          Rhode Island  1052567         9
+## 10        New Hampshire  1316470        10
+## 11                Maine  1328361        11
+## 12               Hawaii  1360301        12
+## 13                Idaho  1567582        13
+## 14             Nebraska  1826341        14
+## 15        West Virginia  1852994        15
+## 16           New Mexico  2059179        16
+## 17               Nevada  2700551        17
+## 18                 Utah  2763885        18
+## 19               Kansas  2853118        19
+## 20             Arkansas  2915918        20
+## 21          Mississippi  2967297        21
+## 22                 Iowa  3046355        22
+## 23          Connecticut  3574097        23
+## 24             Oklahoma  3751351        24
+## 25               Oregon  3831074        25
+## 26             Kentucky  4339367        26
+## 27            Louisiana  4533372        27
+## 28       South Carolina  4625364        28
+## 29              Alabama  4779736        29
+## 30             Colorado  5029196        30
+## 31            Minnesota  5303925        31
+## 32            Wisconsin  5686986        32
+## 33             Maryland  5773552        33
+## 34             Missouri  5988927        34
+## 35            Tennessee  6346105        35
+## 36              Arizona  6392017        36
+## 37              Indiana  6483802        37
+## 38        Massachusetts  6547629        38
+## 39           Washington  6724540        39
+## 40             Virginia  8001024        40
+## 41           New Jersey  8791894        41
+## 42       North Carolina  9535483        42
+## 43             Michigan  9883640        43
+## 44              Georgia  9920000        44
+## 45                 Ohio 11536504        45
+## 46         Pennsylvania 12702379        46
+## 47             Illinois 12830632        47
+## 48             New York 19378102        48
+## 49              Florida 19687653        49
+## 50                Texas 25145561        50
+## 51           California 37253956        51
+\end{verbatim}
+
+7
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  population_in_millions <-}\StringTok{ }\KeywordTok{log10}\NormalTok{(murders}\OperatorTok{$}\NormalTok{population)}
+\NormalTok{  total_gun_murders <-}\StringTok{ }\NormalTok{murders}\OperatorTok{$}\NormalTok{total}
+  \KeywordTok{plot}\NormalTok{(population_in_millions,total_gun_murders)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Tugas_Modul4_files/figure-latex/unnamed-chunk-8-1.pdf}
+
+8
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  population <-}\StringTok{ }\NormalTok{murders}\OperatorTok{$}\NormalTok{population}\OperatorTok{/}\DecValTok{100000}
+  \KeywordTok{hist}\NormalTok{(population)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Tugas_Modul4_files/figure-latex/unnamed-chunk-9-1.pdf}
+
+9
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  popstate=murders}\OperatorTok{$}\NormalTok{population}\OperatorTok{/}\DecValTok{10}\OperatorTok{^}\DecValTok{5}
+  \KeywordTok{boxplot}\NormalTok{(popstate}\OperatorTok{~}\NormalTok{region,}\DataTypeTok{data=}\NormalTok{murders)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Tugas_Modul4_files/figure-latex/unnamed-chunk-10-1.pdf}
+
+\end{document}
