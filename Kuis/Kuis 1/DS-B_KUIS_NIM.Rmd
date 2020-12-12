@@ -1,0 +1,138 @@
+---
+title: "Kuis_DS-B"
+author: "Torangto Situngkir_123180122"
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##Intro
+##Baca Petunjuk Terlebih Dahulu!
+
+0. Cuci tangan dengan sabun hingga benar-benar bersih dengan durasi mencuci tangan kurang lebih 20 detik
+1. Kerjakan soal-soal yang ada! Jangan lupa tulis NAMA dan NIM pada author!
+2. Kuis terdiri dari 2 bagian yaitu bagian pertama dan bagian kedua
+3. Jawablah dengan mengisi chunk dibawah soal!
+4. Durasi pengerjaan sesuai selama 3 hari, dikumpulkan maksimal 
+Rabu, 9 Desember 2020
+5. No toleransi pengumpulan telat. Ingat, telat kemungkinan terburuk ga ada nilai kuis!
+6. Misal soal rancu bisa menghubungi asisten terkait
+7. Export hasil pekerjaan dalam format PDF/Word & sesuaikan nama file sesuai NIM masing-masing.  
+
+##BAGIAN PERTAMA
+
+1. Load library apa saja yang kira-kira digunakan! Lalu gunakan data 'us_contagious_diseases'! **point 1**
+```{r}
+  library(dslabs)
+  library(tidyverse)
+  data("us_contagious_diseases")
+```
+
+2. Tampilkan semua nama kolom pada data frame yang ada! **point 5**
+```{r}
+  names(us_contagious_diseases)
+```
+
+3. Tampilkan tipe data pada kolom penyakit! **point 5**
+```{r}
+  class(us_contagious_diseases$disease)
+```
+
+4. Tampilkan 10 data penyakit polio teratas diurutkan berdasarkan populasi dan terjadi pada antara tahun 1965 dan 1955! **point 11**
+```{r}
+  us_contagious_diseases %>%
+  filter(year>1955 & year<1965,disease=="Polio") %>%
+  arrange(desc(population)) %>%
+  head(n=10)
+```
+
+5. Klasifikasikan data tersebut berdasarkan jumlah kasusnya dengan kondisi :
+-jumlah kasus kurang dari 1000 dikategorikan sebagai "Biasa"
+-jumlah kasus lebih dari 2000 dikategorikan sebagai "Azab
+-jumlah kasus antara kedua kondisi diatas dikategorikan sebagai "Cobaan" 
+
+NB : jika dirasa jumlah data hasilnya terlalu banyak boleh menggunakan fungsi top_n() atau head()**point 10**
+
+```{r}
+  klasifikasi = ""
+  for(i in 1:nrow(us_contagious_diseases)){
+    if(us_contagious_diseases$count[i] < 1000) {
+      klasifikasi[i] <- "Biasa"
+    }
+    else if(us_contagious_diseases$count[i] > 2000) {
+      klasifikasi[i] <- "Azab"
+    }
+    else{
+      klasifikasi[i] <- "Cobaan"
+    }
+  } 
+  head(klasifikasi,n=300)
+```
+
+6. Tambahkan variabel baru berisi data 'us_contagious_diseases' dengan tambahan kolom baru dengan nama "category" yang isinya merupakan implementasi nomor 5 dan kolom "rate" yang isinya merupakan hasil bagi jumlah kasus dengan populasi dikalikan 100000! **point 10**
+```{r}
+  newData <- us_contagious_diseases %>%
+  mutate(
+    Category = klasifikasi,
+    Rate = count/population*10^5
+  )
+  head(newData,n=10)
+```
+
+7. Tampilkan kesimpulan pada data nomor 6 dikelompokkan berdasarkan negara bagian yang isinya  nama negara bagian dan rata-rata rate per negara bagian! **point 8**
+```{r}
+  kesimpulan <- newData %>%
+  group_by(state) %>%
+  summarize(Rata_Rata=mean(Rate))
+  kesimpulan
+```
+
+8. Lakukan visualisasi pada hasil nomor 7!(Bebas menggunakan plot, boxplot, hist, ggplot2 dsb) **point 5**
+```{r}
+  plot(kesimpulan)
+```
+
+##BAGIAN KEDUA
+
+1. Load library tambahan untuk import file! **point 2**
+```{r}
+  library(readr)
+  library (ggplot2)
+  Covid19_Asean <- read_csv("Covid19_Asean.csv")
+```
+
+2. Tampilkan informasi rinci tentang struktur dataset yang digunakan! **point 5**
+```{r}
+  str(Covid19_Asean)
+```
+
+3. Tampilkan nama Negara dengan jumlah Penderita Covid-19 yang Terkonfirmasi dari paling banyak ke paling sedikit! **point 8**
+```{r}
+  Covid19_Asean %>%
+  arrange(desc(Confirmed))
+```
+
+4. Buat kolom baru bernama RateDeaths yang berisi rasio korban Covid-19 yang meninggal dengan yang terkonfirmasi! **point 11**
+```{r}
+  Covid19_Asean = mutate(Covid19_Asean,RateDeaths = Deaths / Confirmed)
+```
+
+5. Negara mana yang memiliki rasio kematian Covid-19 tertinggi dan terendah? Tampilkan nama negaranya. **point 11**
+```{r}
+  print("Tertinggi")
+  filter(Covid19_Asean,RateDeaths == max(Covid19_Asean$RateDeaths))
+  print("Terendah")
+  filter(Covid19_Asean,RateDeaths == min(Covid19_Asean$RateDeaths))
+```
+
+6. Tampilkan grafik plot antara penderita yang sembuh degan penderita yang terkonfirmasi Covid-19! **point 8**
+```{r}
+  Covid19_Asean %>%
+  ggplot(aes(x = Recovered, y = Confirmed)) +
+  geom_line()
+```
+
