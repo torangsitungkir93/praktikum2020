@@ -1,0 +1,34 @@
+---
+title: "Template"
+author: "Torangto Situngkir_123180122"
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##Intro
+ 
+##BAGIAN PERTAMA
+
+1. Judul 
+```{r}
+  library(dslabs)
+  library(tidyverse)
+  data("murders")
+
+```
+
+```{r}
+  murders
+```
+
+
+```{r}
+  murders %>% filter(region == "Northeast") %>%
+  .$total
+```
+
