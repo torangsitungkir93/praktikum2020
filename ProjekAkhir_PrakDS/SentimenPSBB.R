@@ -118,7 +118,7 @@ library(tm)
 library(wordcloud)
 library(RColorBrewer)
 
-# Generate word-cloud
+# Generate word-cloud.
 wordcloud(bingKata$word, bingKata$n, random.order=FALSE, rot.per=0.25, colors=brewer.pal(8, "Dark2"))
 
 
